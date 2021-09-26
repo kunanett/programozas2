@@ -3,7 +3,7 @@ package week2;
 public class Example1 {
     public static void main(String[] args) {
         String myString = "This is a string literal";
-        String myOtherString = "This is a string literal";
+        String myOtherString = new String("This is a string literal");
 
         System.out.println("Equality test using == operator:");
         if (myString == myOtherString) {

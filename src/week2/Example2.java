@@ -2,9 +2,9 @@ package week2;
 
 public class Example2 {
     public static void main(String[] args) {
-        String fruit = "barack";
+        String fruit = null;
 
-        if (fruit.equals("barack")) {
+        if ("barack".equals(fruit)) {
             System.out.println("Ez tényleg egy barack");
         } else {
             System.out.println("nem barack");
