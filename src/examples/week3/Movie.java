@@ -1,4 +1,4 @@
-package week3;
+package examples.week3;
 
 public class Movie {
     private String title;

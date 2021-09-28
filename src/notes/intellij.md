@@ -36,3 +36,4 @@ public static final String
 - **Ctrl+/** generál egysoros kommentet
 - **Ctrl+Shift+/** generál többsoros kommentet
 - **Ctrl+D** megduplázza az aktuális sort, ahol a kurzor áll 
+- **Shift+F6** változó/függvény átnevezése (összes előfordulásnál)
