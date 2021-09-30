@@ -7,6 +7,10 @@ public class Movie {
 
     private static int count = 0;
 
+    public Movie() {
+
+    }
+
     public Movie(String title, int year, double rating) {
         this.title = title;
         this.year = year;
@@ -50,10 +54,12 @@ public class Movie {
     }
 
     public static void main(String[] args) {
-        Movie myMovie = new Movie("The Terminator", 1984, -1000);
+        final Movie myMovie = new Movie("The Terminator", 1984, -1000);
         Movie myMovie2 = new Movie("The Terminator", 1984, -1000);
         myMovie.setRating(-1000);
         System.out.println(myMovie);
         System.out.println("Movie count: " + Movie.count);
+
+        myMovie.setRating(10);
     }
 }
