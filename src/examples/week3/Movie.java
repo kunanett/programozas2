@@ -50,16 +50,16 @@ public class Movie {
 
     @Override
     public String toString() {
-        return String.format("Movie: %s (%d), rating: %f", this.title, this.year, this.rating);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Movie: ").append(this.title);
+        sb.append("(").append(this.year).append(")");
+        sb.append("rating: ").append(this.rating);
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-        final Movie myMovie = new Movie("The Terminator", 1984, -1000);
-        Movie myMovie2 = new Movie("The Terminator", 1984, -1000);
-        myMovie.setRating(-1000);
-        System.out.println(myMovie);
-        System.out.println("Movie count: " + Movie.count);
+        final Movie myMovie = new Movie("The Terminator", 1984, 8.7);
 
-        myMovie.setRating(10);
+        System.out.println(myMovie.toString());
     }
 }

@@ -7,6 +7,8 @@ import java.util.List;
 public class ArrayListExample {
     public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
+
+        numbers.add(5);
         numbers.addAll(List.of(1, 2, 3, 5, 4));
         System.out.println(numbers);
         System.out.println("Size: " + numbers.size());
