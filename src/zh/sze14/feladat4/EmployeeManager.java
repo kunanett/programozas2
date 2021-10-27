@@ -5,21 +5,22 @@ import java.util.List;
 public class EmployeeManager {
     public static String getOldestEmployee(List<String> lines) {
         int maxAge = Integer.MIN_VALUE;
-        String oldestEmployee = "";
+        String oldest = "";
         for (String line : lines) {
             String[] data = line.split(";");
             int age = Integer.parseInt(data[2]);
             String name = data[0];
             if (age > maxAge) {
                 maxAge = age;
-                oldestEmployee = name;
+                oldest = name;
             }
         }
-        return oldestEmployee;
+        return oldest;
     }
 
     public static void main(String[] args) {
-        String oldestEmployee = getOldestEmployee(FileUtils.readLines("src/zh/sze14/feladat4/employees.txt"));
+        List<String> lines = FileUtils.readLines("src/zh/sze14/feladat4/employees.txt");
+        String oldestEmployee = getOldestEmployee(lines);
         System.out.println("The oldest employee: " + oldestEmployee);
     }
 }

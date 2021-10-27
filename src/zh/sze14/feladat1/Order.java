@@ -17,12 +17,7 @@ public class Order {
     }
 
     //adott foodból numberOf mennyiséget tesz a kosárba
-    public void addFood(Food food, int numberOf) {
-        for (int i = 0; i < numberOf; i++) {
-            addFood(food);
-        }
-    }
-
+    //kiír egy összegzést a rendelés tartalmáról
     //kiszámolja, hogy mennyi a teljes ár
     public int calculateTotalPrice() {
         int totalPrice = 0;
@@ -32,7 +27,12 @@ public class Order {
         return totalPrice;
     }
 
-    //kiír egy összegzést a rendelés tartalmáról
+    public void addFood(Food food, int numberOf) {
+        for (int i = 0; i < numberOf; i++) {
+            addFood(food);
+        }
+    }
+
     //a Food objektumok összehasonlításához elegendő a name adattagot vizsgálni
     public void printOrder() {
         String[] foodNames = new String[foods.size()];

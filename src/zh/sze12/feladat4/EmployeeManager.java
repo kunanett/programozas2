@@ -15,7 +15,8 @@ public class EmployeeManager {
     }
 
     public static void main(String[] args) {
-        double averageAge = getAverageAge(FileUtils.readLines("src/zh/sze12/feladat4/employees.txt"));
+        List<String> lines = FileUtils.readLines("src/zh/sze12/feladat4/employees.txt");
+        double averageAge = getAverageAge(lines);
         System.out.println("The average age: " + averageAge);
     }
 }

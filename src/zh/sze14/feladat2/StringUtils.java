@@ -7,6 +7,7 @@ public class StringUtils {
         String consonants = "bcdfghjklmnpqrstvwxyz";
         int vowelCount = 0;
         int consonantCount = 0;
+
         for (char c : input.toLowerCase().toCharArray()) {
             if (vowels.contains(String.valueOf(c))) {
                 vowelCount++;
