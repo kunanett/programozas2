@@ -2,6 +2,8 @@ package zh.sze12.feladat4;
 
 import java.util.List;
 
+import zh.potZH_gyak.gyak1.feladat4.FileUtils;
+
 public class EmployeeManager {
     public static double getAverageAge(List<String> lines) {
         int sumOfAges = 0;

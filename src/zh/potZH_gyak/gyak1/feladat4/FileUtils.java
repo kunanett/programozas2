@@ -1,4 +1,4 @@
-package zh.sze12.feladat4;
+package zh.potZH_gyak.gyak1.feladat4;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
