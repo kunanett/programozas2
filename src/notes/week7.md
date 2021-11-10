@@ -88,4 +88,13 @@ assert logikaiFeltétel
 - *Given*: mi az ami *adott* a teszthez (általában a tesztelt objektum)
 - *When*: *amikor* valami történik a tesztalannyal (általában meghívjuk egy metódusát)
 - *Then*: *akkor*, hogyan fog reagálni az alany, meg fog-e ez felelni az elvárt viselkedéssel?
+- úgy is mondják, hogy: Arrange-Act-Assert
+
+### F-I-R-S-T
+
+- Fast - gyors
+- Independent - független
+- Repeatable - ismételhető
+- Self-validating - önellenőrző
+- Thorough - alapos
 
