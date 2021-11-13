@@ -4,9 +4,15 @@ import java.util.List;
 
 public class ShoppingCartTest {
 
+    private ShoppingCart shoppingCart;
+
+    private void setUp(){
+        shoppingCart = new ShoppingCart();
+    }
+
     public void testAddProduct(){
         //Given
-        ShoppingCart shoppingCart = new ShoppingCart();
+        setUp();
         Product product = new Product("tej", 3);
         //When
         shoppingCart.addProduct(product);
@@ -17,7 +23,7 @@ public class ShoppingCartTest {
 
     public void testCalculateTotalPrice(){
         //Given
-        ShoppingCart shoppingCart = new ShoppingCart();
+        setUp();
         Product product1 = new Product("tej", 3);
         Product product2 = new Product("kakajó", 4);
         //When
@@ -28,9 +34,13 @@ public class ShoppingCartTest {
         assert result == 7 : "A teljes ár 7$";
     }
 
+    public void runTests(){
+        testAddProduct();
+        testCalculateTotalPrice();
+    }
+
     public static void main(String[] args) {
         ShoppingCartTest test = new ShoppingCartTest();
-        test.testAddProduct();
-        test.testCalculateTotalPrice();
+        test.runTests();
     }
 }

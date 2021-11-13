@@ -3,9 +3,16 @@ package zh.sze14.feladat1;
 import java.util.List;
 
 public class OrderTest {
+
+    private Order order;
+
+    private void setUp(){
+        order = new Order();
+    }
+
     public void testAddFood(){
         //Given
-        Order order = new Order();
+        setUp();
         Food food = new Food("vajaskenyér", 1000);
         //When
         order.addFood(food);
@@ -16,7 +23,7 @@ public class OrderTest {
 
     public void testCalculateTotalPrice(){
         //Given
-        Order order = new Order();
+        setUp();
         Food food1 = new Food("vajaskenyér", 1000);
         Food food2 = new Food("margarinoskenyér", 1);
         //When
@@ -28,9 +35,13 @@ public class OrderTest {
 
     }
 
+    public void runTests(){
+        testAddFood();
+        testCalculateTotalPrice();
+    }
+
     public static void main(String[] args) {
         OrderTest test = new OrderTest();
-        //test.testAddFood();
-        test.testCalculateTotalPrice();
+        test.runTests();
     }
 }
