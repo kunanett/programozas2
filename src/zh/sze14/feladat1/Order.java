@@ -1,7 +1,11 @@
 package zh.sze14.feladat1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import zh.sze12.feladat1.Product;
 
 public class Order {
 
@@ -35,7 +39,7 @@ public class Order {
 
     //a Food objektumok összehasonlításához elegendő a name adattagot vizsgálni
     public void printOrder() {
-        String[] foodNames = new String[foods.size()];
+        /*String[] foodNames = new String[foods.size()];
         int[] foodNumber = new int[foodNames.length];
 
         int index = 0;
@@ -59,6 +63,18 @@ public class Order {
         System.out.println("Order contents:");
         for (int i = 0; i < index; i++) {
             System.out.printf("%s: %d%n", foodNames[i], foodNumber[i]);
+        }*/
+        Map<Food, Integer> stat = new HashMap<>();
+        for (Food food : foods) {
+            if (stat.containsKey(food)) {
+                stat.replace(food, stat.get(food) + 1);
+            } else {
+                stat.put(food, 1);
+            }
+        }
+
+        for (Map.Entry<Food, Integer> entry : stat.entrySet()) {
+            System.out.println(entry.getKey().getName() + ": " + entry.getValue());
         }
     }
 }

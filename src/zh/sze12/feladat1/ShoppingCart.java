@@ -1,7 +1,10 @@
 package zh.sze12.feladat1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public class ShoppingCart {
 
@@ -34,7 +37,7 @@ public class ShoppingCart {
 
     //kiír egy összegzést a kosár tartalmáról
     //a Product objektumok összehasonlításához elegendő a name adattagot vizsgálni
-    public void printContents() {
+    public void printContents() {/*
         String[] productNames = new String[products.size()];
         int[] productNumber = new int[productNames.length];
 
@@ -59,6 +62,18 @@ public class ShoppingCart {
         System.out.println("ShoppingCart contents:");
         for (int i = 0; i < index; i++) {
             System.out.printf("%s: %d%n", productNames[i], productNumber[i]);
+        }*/
+        Map<Product, Integer> stat = new HashMap<>();
+        for (Product p: products){
+            if(stat.containsKey(p)){
+                stat.replace(p, stat.get(p) + 1);
+            }else{
+                stat.put(p, 1);
+            }
+        }
+
+        for (Map.Entry<Product, Integer> entry : stat.entrySet()){
+            System.out.println(entry.getKey().getName() + ": " + entry.getValue());
         }
     }
 }

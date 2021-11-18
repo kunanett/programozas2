@@ -5,9 +5,13 @@ public class MyUtils {
     public static boolean isValidIP(String ip) {
         boolean valid = true;
         String[] parts = ip.split("\\.");
-        for (String number : parts) {
-            if (Integer.parseInt(number) < 0 || Integer.parseInt(number) > 255) {
-                valid = false;
+        if (parts.length != 4) {
+            valid = false;
+        } else {
+            for (String number : parts) {
+                if (Integer.parseInt(number) < 0 || Integer.parseInt(number) > 255) {
+                    valid = false;
+                }
             }
         }
         return valid;
